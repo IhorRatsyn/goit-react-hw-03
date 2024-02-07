@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ContactForm from "./ContactForm";
 import ContactList from "./ContactList";
 import SearchBox from "./SearchBox";
-// import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 
 class App extends Component {
