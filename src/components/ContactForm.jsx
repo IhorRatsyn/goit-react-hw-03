@@ -1,6 +1,6 @@
-import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import PropTypes from "prop-types";
 
 const validationSchema = Yup.object({
   name: Yup.string()
@@ -38,3 +38,10 @@ const ContactForm = ({ onSubmit }) => {
 };
 
 export default ContactForm;
+
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func,
+};
+
+

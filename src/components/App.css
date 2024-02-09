@@ -12,16 +12,20 @@ body {
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
   color: #3f3f3f;
   margin-bottom: 30px;
 }
 
 form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 30px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 26px 31px;
+  max-width: 300px;
 }
 
 form label {
@@ -31,7 +35,7 @@ form label {
 
 form input[type="text"],
 form input[type="tel"] {
-  width: calc(48% - 10px);
+  width: 100%;
   padding: 5px;
   font-size: 16px;
 }
@@ -40,14 +44,11 @@ form button {
   width: calc(48% - 10px);
   padding: 5px;
   font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+  background-color: lightgrey;
+  color: black;
   cursor: pointer;
-}
-
-form button:hover {
-  background-color: #0056b3;
+  align-self: center;
+  border: 1px black solid;
 }
 
 .search-container {
@@ -61,6 +62,7 @@ form button:hover {
   width: calc(80% - 10px);
   padding: 5px;
   font-size: 16px;
+  max-width: 350px;
 }
 
 .search-container button {
@@ -78,13 +80,12 @@ form button:hover {
 }
 
 .contact-list {
-  border: 1px solid #ccc;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px;
 }
 
 .contact-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -95,6 +96,11 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  border: 1px solid #100f0f;
+  padding: 10px;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 .contact-list li span {
@@ -110,12 +116,10 @@ form button:hover {
 .contact-list li button {
   padding: 5px;
   font-size: 14px;
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-  cursor: pointer;
 }
 
-.contact-list li button:hover {
-  background-color: #bd2130;
+.contact-detail {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
