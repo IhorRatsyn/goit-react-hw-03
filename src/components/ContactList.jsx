@@ -5,7 +5,6 @@ const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ul>
       {contacts
-        .filter((contact) => contact.name.toLowerCase())
         .map((contact) => (
           <ContactItem
             key={contact.id}
