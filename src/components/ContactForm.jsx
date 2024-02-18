@@ -14,11 +14,22 @@ const validationSchema = Yup.object({
 });
 
 const ContactForm = ({ onSubmit }) => {
+
+  const addContact = (values, {resetForm}) => {
+    const newContact = {
+      id: Date.now(),
+      name: values.name,
+      number: values.number,
+    };
+    onSubmit(newContact)
+    resetForm();
+  };
+
   return (
     <Formik
       initialValues={{ name: "", number: "" }}
       validationSchema={validationSchema}
-      onSubmit={onSubmit}
+      onSubmit={addContact}
     >
       {({ errors, touched }) => (
         <Form>

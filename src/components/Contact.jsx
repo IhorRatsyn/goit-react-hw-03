@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import PersonIcon from "@mui/icons-material/Person";
 import PhoneIcon from "@mui/icons-material/Phone";
 
-const ContactItem = ({ contact, onDeleteContact }) => {
+const Contact = ({ contact, onDeleteContact }) => {
   return (
     <li>
       <div>
@@ -22,9 +22,9 @@ const ContactItem = ({ contact, onDeleteContact }) => {
   );
 };
 
-export default ContactItem;
+export default Contact;
 
-ContactItem.propTypes = {
+Contact.propTypes = {
   contact: PropTypes.object,
   onDeleteContact: PropTypes.func,
 };

@@ -1,12 +1,12 @@
 import React from "react";
-import ContactItem from "./ContactItem";
+import Contact from "./Contact.jsx";
 
 const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ul>
       {contacts
         .map((contact) => (
-          <ContactItem
+          <Contact
             key={contact.id}
             contact={contact}
             onDeleteContact={onDeleteContact}

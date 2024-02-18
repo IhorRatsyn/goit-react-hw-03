@@ -22,14 +22,10 @@ const App = () => {
       window.localStorage.setItem(localStorageKey, JSON.stringify(contacts));
   }, [contacts])
 
-  const addContact = (values) => {
-    const newContact = {
-      id: Date.now(),
-      name: values.name,
-      number: values.number,
-    };
+  const onSubmit = (newContact) => {
     setContacts([...contacts, newContact]);
   };
+
 
   const deleteContact = (id) => {
     setContacts(contacts.filter((contact) => contact.id !== id));
@@ -48,7 +44,7 @@ const App = () => {
   return (
     <div className="container">
       <h1 className="title">Phonebook</h1>
-      <ContactForm onSubmit={addContact} />
+      <ContactForm onSubmit={onSubmit} />
       <div className="search-container">
         <SearchBox onChange={handleFilterChange} />
       </div>
